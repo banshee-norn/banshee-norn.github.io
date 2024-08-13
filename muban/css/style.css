@@ -349,12 +349,28 @@ span,
 #about {
     height: auto;
     width: 100%;
+	display: flex;
+	flex-flow: row wrap;
+	align-content: flex-start;
     padding: 6rem 0rem;
     background: rgb(235, 237, 239);
 }
 
-.col-md-4{
-	width: 300px;
+.col-md-4-pro{
+	/* width: 20%; */
+	flex: 0 0 50%;
+	display: inline-block;
+}
+
+.col-md-4-phd{
+	/* width: 20%; */
+	flex: 0 0 25%;
+	display: inline-block;
+}
+
+.col-md-4-gra{
+	/* width: 20%; */
+	flex: 0 0 20%;
 	display: inline-block;
 }
 
