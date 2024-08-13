@@ -359,6 +359,11 @@ span,
     margin-bottom: 2rem;
 }
 
+.rounded-circle {
+  width: 128px;
+  height: 128px
+}
+
 #about .icon {
     padding: 16px;
 }
