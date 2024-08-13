@@ -353,6 +353,10 @@ span,
     background: rgb(235, 237, 239);
 }
 
+.col-md-4{
+	width: 300px;
+}
+
 #about span {
     overflow: hidden;
     border-radius: 50%;
