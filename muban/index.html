@@ -88,119 +88,12 @@
     <section id="main">
         <div class="container">
             <div class="main-header">
-                <h2 class="display-4 mb-3">Tuning-free Downstream Tasks</h2>
-                <p>HyperFree is a hyperspectral foundation model with the abilities of channel adaptive and fine-tuning free, 
-					which is suitable for multi-class classification, one-class classification, anomaly detection, target detection and change detection tasks.
-					With further tuning, HyperFree can also be adapted to spectral unmixing, object tracking and image denosing tasks.</p>
+                <h2 class="display-4 mb-3">Abstract</h2>
+                <p>Advanced interpretation of hyperspectral remote sensing images benefits many precise Earth observation tasks. Recently, visual foundation models have promoted the remote sensing interpretation but concentrating on RGB and multispectral images. Due to the varied hyperspectral channels, existing foundation models would face image-by-image tuning situation, imposing great pressure on hardware and time resources. In this paper, we propose a tuning-free hyperspectral foundation model called HyperFree, by adapting the existing visual prompt engineering. To process varied channel numbers,                      we design a learned weight dictionary covering full-spectrum from 0.4&#126;2.5 &#181;m, supporting to build the embedding layer dynamically. To make the prompt design more tractable, HyperFree can generate multiple semantic-aware masks for one prompt by treating feature distance as semantic-similarity. After pre-training HyperFree on constructed large-scale high-resolution hyperspectral images, HyperFree (1 prompt) has shown comparable results with specialized models (5 shots) on 5 tasks and 11 datasets.
+				</p>
             </div>
 
-            <div class="row" style="background:lightgray">
-                <div class="col-md-6 col-sm-12">
-                    <img src="img/place1.png" alt="">
-                </div>
-                <div class="col-md-6 col-sm-12 align-self-center">
-                    <div class="main-text">
-                        <h3>Classification</h3>
-                        <p>Hyperspectral classification (HC) aims to assign a class label to each pixel in a hyperspectral image. 
-						HC accepts hyperspectral imagery and prompt points for each class as input and outputs a classification map.</p>
-
-<!--                        <p>Libero non rerum quasi enim explicabo, obcaecati eum aspernatur cupiditate quam, nobis
-                            placeat, rem.</p> -->
-                        <hr>
-<!--                        <span class="pull-left">July 02, 2018</span> -->
-                        <a href="http://localhost:1234/" class="cta" target="_blank">Try our model <i class="fa fa-arrow-circle-o-right"
-                                aria-hidden="true"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <!--/one -->
-
-            <div class="row">
-                <div class="col-md-6 col-sm-12  align-self-center">
-                    <div class="main-text text-right">
-                        <h3>One Class Classification</h3>
-                        <p>Hyperspectral one-class classification (HOCC) involves extracting the class of interest in hyperspectral imagery by only labelling the class of interest. 
-						HOCC always accepts hyperspectral imagery as input and outputs a distribution map of the class of interest. </p>
-
-<!--                        <p>Facilis nam laboriosam eius quo modi, reprehenderit consequuntur facere doloribus cum sed
-                            ducimus veniam, non ut consequatur deserunt, ullam obcaecati! Dolor ex accusamus suscipit
-                            dolorem animi nobis. Sapiente blanditiis, molestiae ratione ducimus earum maxime!</p> -->
-                        <hr>
-<!--                        <span class="pull-left">July 22, 2018</span> -->
-                        <a href="http://localhost:1235/" class="cta" target="_blank">Try our model <i class="fa fa-arrow-circle-o-right"
-                                aria-hidden="true"></i></a>
-                    </div>
-                </div>
-                <div class="col-md-6 col-sm-12 order-first order-lg-last">
-                    <img src="img/place2.png" alt="">
-                </div>
-            </div>
-            <!--/two -->
-
-            <div class="row" style="background:lightgray">
-                <div class="col-md-6 col-sm-12">
-                    <img src="img/place3.png" alt="">
-                </div>
-                <div class="col-md-6 col-sm-12  align-self-center">
-                    <div class="main-text">
-                        <h3>Target Detection</h3>
-                        <p>Hyperspectral target detection (HTD) involves identifying interesting objects in hyperspectral imagery with target spectral signatures. 
-						HTD always accepts both hyperspectral imagery and target spectrum, and outputs detection density map.</p>
-
-<!--                        <p>Libero non rerum quasi enim explicabo, obcaecati eum aspernatur cupiditate quam, nobis
-                            placeat, rem.</p> -->
-                        <hr>
-<!--                        <span class="pull-left">July 02, 2018</span> -->
-                        <a href="http://localhost:1236/" class="cta" target="_blank">Try our model <i class="fa fa-arrow-circle-o-right"
-                                aria-hidden="true"></i></a>
-
-                    </div>
-                </div>
-            </div>
-            <!--/three -->
-
-            <div class="row">
-                <div class="col-md-6 col-sm-12  align-self-center">
-                    <div class="main-text text-right">
-                        <h3>Anomaly Detection</h3>
-                        <p>Hyperspectral anomaly detection (HAD) involves identifying objects deviating from the background without any prior knowledge. 
-						HTD always accepts only hyperspectral imagery, and outputs detection density map.</p>
-<!--                        <p> Dolor ex accusamus suscipit dolorem animi nobis. Sapiente blanditiis, molestiae ratione
-                            ducimus earum maxime!</p> -->
-                        <hr>
-<!--                        <span class="pull-left">July 22, 2018</span> -->
-                        <a href="http://localhost:1237/" class="cta" target="_blank">Try our model <i class="fa fa-arrow-circle-o-right"
-                                aria-hidden="true"></i></a>
-
-                    </div>
-                </div>
-                <div class="col-md-6 col-sm-12 order-first order-lg-last">
-                    <img src="img/place4.png" alt="">
-                </div>
-                <!--/four -->
-            </div>
-			
-			<div class="row" style="background:lightgray">
-				<div class="col-md-6 col-sm-12">
-					<img src="img/place5.png" alt="">
-				</div>
-				<div class="col-md-6 col-sm-12  align-self-center">
-					<div class="main-text">
-						<h3>Change Detection</h3>
-						<p>Hyperspectral change detection (HCD) involves identifying changes in time-series hyperspectral imageries. 
-						HCD mostly compares images of two time steps and outputs a change detection map.</p>
-
-<!-- 						<p>Libero non rerum quasi enim explicabo, obcaecati eum aspernatur cupiditate quam, nobis
-							placeat, rem.</p> -->
-						<hr>
-<!--                        <span class="pull-left">July 02, 2018</span> -->
-						<a href="http://localhost:1238/" class="cta" target="_blank">Try our model <i class="fa fa-arrow-circle-o-right"
-								aria-hidden="true"></i></a>
-
-					</div>
-				</div>
-			</div>
+            
 			<!--/five -->
         </div>
     </section>
