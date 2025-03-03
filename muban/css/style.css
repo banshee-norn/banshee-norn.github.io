@@ -271,6 +271,13 @@ span,
     font-weight: 400;
 }
 
+
+.img_center {
+    clear: both;
+    display: block;
+    margin: auto;
+}
+
 @media(max-width:991px) {
     .main-header {
         padding: 2rem 1rem;
