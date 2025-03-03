@@ -368,14 +368,14 @@ span,
     color: #000000;
 }
 
-#experiment img {
+.img1 {
     width: 100%;
     height: auto;
     overflow: hidden;
 }
 
 @media(max-width:768px) {
-    #experiment img {
+    .img1 {
         padding: 2rem;
     }
 }
@@ -391,6 +391,12 @@ span,
 .experiment-text a {
     float: right;
     font-weight: 400;
+}
+
+.img2 {
+   width: 70%;
+    height: auto;
+    overflow: hidden;
 }
 
 @media(max-width:991px) {
@@ -473,8 +479,14 @@ span,
 	display: flex;
 	flex-flow: row wrap;
 	align-content: flex-start;
-    padding: 6rem 0rem;
+    padding: 3rem 0rem;
     background: rgb(235, 237, 239);
+}
+
+#about h2,
+span,
+.cta {
+    color: #000000;
 }
 
 .col-md-4-pro{
