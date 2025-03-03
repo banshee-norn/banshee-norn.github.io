@@ -92,9 +92,9 @@
                 <p class="main-text" style="text-align: justify;">Advanced interpretation of hyperspectral remote sensing images benefits many precise Earth observation tasks. Recently, visual foundation models have promoted the remote sensing interpretation but concentrating on RGB and multispectral images. Due to the varied hyperspectral channels, existing foundation models would face image-by-image tuning situation, imposing great pressure on hardware and time resources. In this paper, we propose a tuning-free hyperspectral foundation model called HyperFree, by adapting the existing visual prompt engineering. To process varied channel numbers,                      we design a learned weight dictionary covering full-spectrum from 0.4&#126;2.5 &#181;m, supporting to build the embedding layer dynamically. To make the prompt design more tractable, HyperFree can generate multiple semantic-aware masks for one prompt by treating feature distance as semantic-similarity. After pre-training HyperFree on constructed large-scale high-resolution hyperspectral images, HyperFree (1 prompt) has shown comparable results with specialized models (5 shots) on 5 tasks and 11 datasets.
 				</p>
 				<div>
-				    <img src="img/idea.png" alt="" class="img_center" >
+				    <img src="img/idea.png" alt="" >
 				</div>
-				<p class="main-text" style="text-align: justify;">
+				<p class="main-text" >
 					<b>Fig. 1.</b> Comparison of existing RSFMs with the proposed HyperFree model.
 				</p>
             </div>
@@ -102,17 +102,17 @@
         </div>
     </section>
 	
-	<section id="main">
+	<section id="structure">
 	    <div class="container">
-	        <div class="main-header">
+	        <div class="structure-header">
 	            <h2 class="display-4 mb-3">HyerFree</h2>
-	            <p class="main-text" style="text-align: justify;">
+	            <p class="structure-text" style="text-align: justify;">
 					In this paper, we propose the first tuning-free hyperspectral foundation model, which can process any hyperspectral image in different tasks with promptable or zero-shot manner. A weight dictionary that spans the full spectrum, enabling dynamic generation of the embedding layer dynamically according to input wavelengths. We also propose to map both prompts and masks into feature space to identify multiple semantic-aware masks for one prompt, where different interaction workflows are designed for each downstream tasks. Finally we built the Hyper-Seg data engine to train the HyperFree model and tested it on 11 datasets from 5 tasks in tuningfree manner, 16 datasets from 8 tasks in tuning manner as an extensive experiment.
 				</p>
 				<div>
-				    <img src="img/structure.png" alt="" class="img_center">
+				    <img src="img/structure.png" alt="">
 				</div>
-				<p class="main-text" style="text-align: justify;">
+				<p class="structure-text" style="text-align: justify;">
 					<b>Fig. 2.</b> (a) Full spectrum Promptable Training. Based on the meta-architecture of promptable segmentation, channel-adaptive embedding layer is developed to process any-channel input, which relies on a learnable weight dictionary and generates the embedding layer dynam- ically according to the input wavelengths. With the constructed Hyper-Seg dataset, HyperFree is trained with randomly selected channels from full spectrum and point prompts in each iteration. (b) Prompt-mask-feature Interactive Inferring. Keep the trained HyperFree frozen, different PMF interaction workflows are designed to complete the downstream tasks in promptable or zero-shot manner, where we use feature distance to measure the semantic consistency. An interaction instantiation for hyperspectral classification task is given above as an example.
 				</p>
 	        </div>
