@@ -227,13 +227,13 @@ nav {
 
 #main {
     padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding-bottom: 1rem;
 	background: rgb(235, 237, 239);
 }
 
 .main-header {
     text-align: center;
-    padding: 2rem 2rem;
+    padding: 2rem 1rem;
 }
 
 #main .col-md-6 {
@@ -276,16 +276,9 @@ span,
     font-weight: 400;
 }
 
-
-.img_center {
-    clear: both;
-    display: block;
-    margin: auto;
-}
-
 @media(max-width:991px) {
     .main-header {
-        padding: 2rem 1rem;
+        padding: 1rem 1rem;
     }
 }
 
@@ -307,14 +300,14 @@ span,
     padding: 0;
 }
 
-#structure h3 {
+#structure h2 {
     margin-bottom: 1rem;
 }
 
-#structure h3,
+#structure h2,
 span,
 .cta {
-    color: #262626;
+    color: #000000;
 }
 
 #structure img {
@@ -344,6 +337,64 @@ span,
 
 @media(max-width:991px) {
     .structure-header {
+        padding: 2rem 1rem;
+    }
+}
+
+/*-- experiment section */
+
+#experiment {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+	/* background: rgb(235, 237, 239); */
+}
+
+.experiment-header {
+    text-align: center;
+    padding: 2rem 2rem;
+}
+
+#experiment .col-md-6 {
+    padding: 0;
+}
+
+#experiment h2 {
+    margin-bottom: 1rem;
+}
+
+#experiment h2,
+span,
+.cta {
+    color: #000000;
+}
+
+#experiment img {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+@media(max-width:768px) {
+    #experiment img {
+        padding: 2rem;
+    }
+}
+
+.experiment-text {
+    padding: 1rem;
+    align-items: center;
+	color: #262626;
+	font-size: 20px;
+	font-family: "Times New Roman";
+}
+
+.experiment-text a {
+    float: right;
+    font-weight: 400;
+}
+
+@media(max-width:991px) {
+    .experiment-header {
         padding: 2rem 1rem;
     }
 }
