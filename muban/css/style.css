@@ -274,9 +274,8 @@ span,
 
 .img_center {
     clear: both;
-    display: inline;
-	float: right;
-    /* margin: auto; */
+    display: block;
+    margin: auto;
 }
 
 @media(max-width:991px) {
