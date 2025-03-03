@@ -91,7 +91,7 @@
                 <h2 class="display-4 mb-3">Abstract</h2>
                 <p class="main-text" style="text-align: justify;">Advanced interpretation of hyperspectral remote sensing images benefits many precise Earth observation tasks. Recently, visual foundation models have promoted the remote sensing interpretation but concentrating on RGB and multispectral images. Due to the varied hyperspectral channels, existing foundation models would face image-by-image tuning situation, imposing great pressure on hardware and time resources. In this paper, we propose a tuning-free hyperspectral foundation model called HyperFree, by adapting the existing visual prompt engineering. To process varied channel numbers,                      we design a learned weight dictionary covering full-spectrum from 0.4&#126;2.5 &#181;m, supporting to build the embedding layer dynamically. To make the prompt design more tractable, HyperFree can generate multiple semantic-aware masks for one prompt by treating feature distance as semantic-similarity. After pre-training HyperFree on constructed large-scale high-resolution hyperspectral images, HyperFree (1 prompt) has shown comparable results with specialized models (5 shots) on 5 tasks and 11 datasets.
 				</p>
-				<div class="col-md-6 col-sm-12 align-self-center">
+				<div>
 				    <img src="img/idea.png" alt="" class="img_center">
 				</div>
             </div>
@@ -100,6 +100,23 @@
 			<!--/five -->
         </div>
     </section>
+	
+	<section id="main">
+	    <div class="container">
+	        <div class="main-header">
+	            <h2 class="display-4 mb-3">HyerFree</h2>
+	            <p class="main-text" style="text-align: justify;">
+					In this paper, we propose the first tuning-free hyperspectral foundation model, which can process any hyperspectral image in different tasks with promptable or zero-shot manner. A weight dictionary that spans the full spectrum, enabling dynamic generation of the embedding layer dynamically according to input wavelengths. We also propose to map both prompts and masks into feature space to identify multiple semantic-aware masks for one prompt, where different interaction workflows are designed for each downstream tasks. Finally we built the Hyper-Seg data engine to train the HyperFree model and tested it on 11 datasets from 5 tasks in tuningfree manner, 16 datasets from 8 tasks in tuning manner as an extensive experiment.
+				</p>
+				<div>
+				    <img src="img/structure.png" alt="" class="img_center">
+				</div>
+	        </div>
+	
+	        
+			<!--/five -->
+	    </div>
+	</section>
 	
     <!-- section main -->
 <!--    <section id="main">
