@@ -228,7 +228,7 @@ nav {
 #main {
     padding-top: 3rem;
     padding-bottom: 1rem;
-	background: rgb(235, 237, 239);
+	background: rgb(255, 255, 255);
 }
 
 .main-header {
@@ -288,7 +288,7 @@ span,
 #structure {
     padding-top: 3rem;
     padding-bottom: 3rem;
-	/* background: rgb(235, 237, 239); */
+	background: rgb(235, 237, 239);
 }
 
 .structure-header {
@@ -489,6 +489,14 @@ span,
     color: #000000;
 }
 
+.text1 {
+    padding: 1rem;
+    align-items: center;
+	/* color: #262626; */
+	font-size: 20px;
+	/* font-family: "Times New Roman"; */
+}
+
 .col-md-4-pro{
 	/* width: 20%; */
 	flex: 0 0 50%;
@@ -534,7 +542,7 @@ span,
 
 .service-heading {
     color: #262626;
-    padding: 1rem 0;
+   /* padding: 1rem 0; */
 }
 
 
