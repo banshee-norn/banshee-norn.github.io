@@ -251,11 +251,11 @@ span,
 
 #main img {
     width: 100%;
-    height: 50%;
+    height: auto;
     overflow: hidden;
 }
 
-@media(max-width:768px) {
+@media(max-width:600px) {
     #main img {
         padding: 2rem;
     }
