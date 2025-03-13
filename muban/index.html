@@ -65,7 +65,7 @@
                     <h1 class="display-4 mb-4">HyperFree</h1>
                     <h2 class="mb-5">A Channel-adaptive and Tuning-free Foundation Model for Hyperspectral Remote Sensing Imagery</h2>
                     <p>HyperFree is a hyperspectral foundation model with the abilities of channel adaptive and fine-tuning free, 
-					which is suitable for multi-class classification, one-class classification, anomaly detection, target detection and change detection tasks. 
+					which is suitable for hyperspectral classification(HC), hyperspectral one-class classification(HOCC), hyperspectral anomaly detection(HAD), hyperspectral target detection(HTD) and hyperspectral change detection(HCD) tasks. 
 					With further tuning, HyperFree can also be adapted to spectral unmixing, object tracking and image denosing tasks.</p>
                     <button onclick="hrefLocation()" class="btn btn-header"> Paper</button>
 					<button onclick="hrefLocation()" class="btn btn-header"> Code</button>
@@ -115,7 +115,7 @@
 					To process varied channel numbers, we design a learned weight dictionary covering full-spectrum from 0.4~2.5 µm, supporting to build the embedding layer dynamically. 
 				</p>
 				<div>
-				    <img src="img/structure.png" alt="">
+				    <img src="img/dictionary.png" alt="">
 				</div>
 				<p class="structure-text" style="text-align: justify;">
 					<b>Fig. 2.</b> (a) Full spectrum Promptable Training. Based on the meta-architecture of promptable segmentation, channel-adaptive embedding layer is developed to process any-channel input, which relies on a learnable weight dictionary and generates the embedding layer dynam- ically according to the input wavelengths. With the constructed Hyper-Seg dataset, HyperFree is trained with randomly selected channels from full spectrum and point prompts in each iteration. (b) Prompt-mask-feature Interactive Inferring. Keep the trained HyperFree frozen, different PMF interaction workflows are designed to complete the downstream tasks in promptable or zero-shot manner, where we use feature distance to measure the semantic consistency. An interaction instantiation for hyperspectral classification task is given above as an example.
@@ -161,7 +161,9 @@
 	            <h2 class="display-4 mb-3"><b>Zero-shot manner of HyperFree</b></h2>
 	            <p class="main-text" style="text-align: justify;">HyperFree can complete anomaly detection and change detection in promptable manner.
 				</p>
-
+				<div>
+				    <img class="img2" src="img/zero_shot.png" alt="">
+				</div>
 				<p class="main-text" >
 					<b>Fig. 1.</b> Comparison of existing RSFMs with the proposed HyperFree model.
 				</p>
@@ -192,9 +194,10 @@
 	            <h2 class="display-4 mb-3"><b>HyperSeg Data Engine</b></h2>
 	            <p class="main-text" style="text-align: justify;">Hyper-Seg is built to generate segmented masks automatically for large-scale promptable training. We finally obtained 41900 high-resolution image pairs with size of 512×512×224.
 				</p>
-				<div>
-				    <img src="img/idea.png" alt="" >
-				</div>
+				<table><tr>
+				<td><img class="img1" src=img/data_engine.png border=0></td>
+				<td><img class="img1" src=img/data_engine_table.png border=0></td>
+				</tr></table>
 				<p class="main-text" >
 					<b>Fig. 1.</b> Comparison of existing RSFMs with the proposed HyperFree model.
 				</p>
