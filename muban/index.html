@@ -92,12 +92,13 @@
     <section id="main">
         <div class="container">
             <div class="main-header">
-                <h2 class="display-4 mb-3"><b>Abstract</b></h2>
-                <p class="main-text" style="text-align: justify;">Advanced interpretation of hyperspectral remote sensing images benefits many precise Earth observation tasks. Recently, visual foundation models have promoted the remote sensing interpretation but concentrating on RGB and multispectral images. Due to the varied hyperspectral channels, existing foundation models would face image-by-image tuning situation, imposing great pressure on hardware and time resources. In this paper, we propose a tuning-free hyperspectral foundation model called HyperFree, by adapting the existing visual prompt engineering. To process varied channel numbers,                      we design a learned weight dictionary covering full-spectrum from 0.4&#126;2.5 &#181;m, supporting to build the embedding layer dynamically. To make the prompt design more tractable, HyperFree can generate multiple semantic-aware masks for one prompt by treating feature distance as semantic-similarity. After pre-training HyperFree on constructed large-scale high-resolution hyperspectral images, HyperFree (1 prompt) has shown comparable results with specialized models (5 shots) on 5 tasks and 11 datasets.
+                <h2 class="display-4 mb-3"><b>Uniqueness compared to other RSFM</b></h2>
+                <p class="main-text" style="text-align: justify;">Existing foundation models would face image-by-image tuning situation, imposing great pressure on hardware and time resources. In constrasy, HyperFree can process any unseen hyperspectral image directly without tuning in five tasks.
 				</p>
-				<div>
-				    <img src="img/idea.png" alt="" >
-				</div>
+				<table><tr>
+				<td><img class="img1" src=img/idea1.png border=0></td>
+				<td><img class="img1" src=img/idea2.png border=0></td>
+				</tr></table>
 				<p class="main-text" >
 					<b>Fig. 1.</b> Comparison of existing RSFMs with the proposed HyperFree model.
 				</p>
@@ -109,9 +110,9 @@
 	<section id="structure">
 	    <div class="container">
 	        <div class="structure-header">
-	            <h2 class="display-4 mb-3"><b>HyperFree</b></h2>
+	            <h2 class="display-4 mb-3"><b>HyperFree accepts varied image channels</b></h2>
 	            <p class="structure-text" style="text-align: justify;">
-					In this paper, we propose the first tuning-free hyperspectral foundation model, which can process any hyperspectral image in different tasks with promptable or zero-shot manner. A weight dictionary that spans the full spectrum, enabling dynamic generation of the embedding layer dynamically according to input wavelengths. We also propose to map both prompts and masks into feature space to identify multiple semantic-aware masks for one prompt, where different interaction workflows are designed for each downstream tasks. Finally we built the Hyper-Seg data engine to train the HyperFree model and tested it on 11 datasets from 5 tasks in tuningfree manner, 16 datasets from 8 tasks in tuning manner as an extensive experiment.
+					To process varied channel numbers, we design a learned weight dictionary covering full-spectrum from 0.4~2.5 µm, supporting to build the embedding layer dynamically. 
 				</p>
 				<div>
 				    <img src="img/structure.png" alt="">
@@ -127,9 +128,9 @@
 	<section id="experiment">
 	    <div class="container">
 	        <div class="experiment-header">
-	            <h2 class="display-4 mb-3"><b>Experiment</b></h2>
+	            <h2 class="display-4 mb-3"><b>Promptable manner of HyperFree</b></h2>
 	            <p class="experiment-text" style="text-align: justify;">
-					We evaluate the proposed HyperFree on five downstream hyperspectral tasks including HC, HOCC, HTD, HAD and HCD tasks. Most tuning-free and tuning manner quantitative results are reported in <b>Fig. 3</b> , and qualitative comparison on five exemplified images in <b>Fig. 4</b> .
+					HyperFree can complete multi-class classification, one-class classification and target detection in promptable manner.
 				</p>
 				<table><tr>
 				<td><img class="img1" src=img/free.png border=0></td>
@@ -149,6 +150,53 @@
 				</div>
 				<p class="experiment-text" >
 					<b>Fig. 4.</b> Exemplified comparison results for five tuning-free tasks.
+				</p>
+	        </div>
+			<!--/five -->
+	    </div>
+	</section>
+	<section id="main">
+	    <div class="container">
+	        <div class="main-header">
+	            <h2 class="display-4 mb-3"><b>Zero-shot manner of HyperFree</b></h2>
+	            <p class="main-text" style="text-align: justify;">HyperFree can complete anomaly detection and change detection in promptable manner.
+				</p>
+
+				<p class="main-text" >
+					<b>Fig. 1.</b> Comparison of existing RSFMs with the proposed HyperFree model.
+				</p>
+	        </div>
+			<!--/five -->
+	    </div>
+	</section>
+	<section id="main">
+	    <div class="container">
+	        <div class="main-header">
+	            <h2 class="display-4 mb-3"><b>Overall Results</b></h2>
+	            <p class="main-text" style="text-align: justify;">HyperFree achieves comparable accuracy to state-of-the-art models in a tuning-free manner (using just one prompt), and outperforms most models after tuning.
+				</p>
+				<table><tr>
+				<td><img class="img1" src=img/free.png border=0></td>
+				<td><img class="img1" src=img/not-free.png border=0></td>
+				</tr></table>
+				<p class="main-text" >
+					<b>Fig. 1.</b> In tuning-free manner (left), HyperFree (1 prompt) can achieve comparable results with specialized models (5 shots) on 5 tasks and 11 datasets. In tuning manner (right), HyperFree can achieve overall better results with specialized models on 8 tasks and 16 datasets.
+				</p>
+	        </div>
+			<!--/five -->
+	    </div>
+	</section>
+	<section id="main">
+	    <div class="container">
+	        <div class="main-header">
+	            <h2 class="display-4 mb-3"><b>HyperSeg Data Engine</b></h2>
+	            <p class="main-text" style="text-align: justify;">Hyper-Seg is built to generate segmented masks automatically for large-scale promptable training. We finally obtained 41900 high-resolution image pairs with size of 512×512×224.
+				</p>
+				<div>
+				    <img src="img/idea.png" alt="" >
+				</div>
+				<p class="main-text" >
+					<b>Fig. 1.</b> Comparison of existing RSFMs with the proposed HyperFree model.
 				</p>
 	        </div>
 			<!--/five -->
