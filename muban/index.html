@@ -36,15 +36,15 @@
                     <li class="nav-item current">
                         <a class="nav-link smoothscroll" href="#home">Home</a>
                     </li>
-                    <li class="nav-item">
+<!--                    <li class="nav-item">
                         <a class="nav-link smoothscroll" href="#main">Abstract</a>
-                    </li>
+                    </li> -->
                    <li class="nav-item">
-                        <a class="nav-link smoothscroll" href="#structure">Model</a>
+                        <a class="nav-link smoothscroll" href="#main">Model</a>
                     </li>
-					<li class="nav-item">
+<!-- 					<li class="nav-item">
 					     <a class="nav-link smoothscroll" href="#experiment">Experiment</a>
-					 </li>
+					 </li> -->
                     <li class="nav-item">
                         <a class="nav-link smoothscroll" href="#about">About</a>
                     </li>
@@ -96,12 +96,12 @@
                 <p class="main-text" style="text-align: justify;">Existing foundation models would face image-by-image tuning situation, imposing great pressure on hardware and time resources. In constrasy, HyperFree can process any unseen hyperspectral image directly without tuning in five tasks.
 				</p>
 				<table><tr>
-				<td><img class="img1" src=img/idea1.png border=0></td>
-				<td><img class="img1" src=img/idea2.png border=0></td>
+				<td><img src=img/idea1.png border=0></td>
+				<td><img src=img/idea2.png border=0></td>
 				</tr></table>
-				<p class="main-text" >
+<!-- 				<p class="main-text" >
 					<b>Fig. 1.</b> Comparison of existing RSFMs with the proposed HyperFree model.
-				</p>
+				</p> -->
             </div>
 			<!--/five -->
         </div>
@@ -117,57 +117,47 @@
 				<div>
 				    <img src="img/dictionary.png" alt="">
 				</div>
-				<p class="structure-text" style="text-align: justify;">
+<!-- 				<p class="structure-text" style="text-align: justify;">
 					<b>Fig. 2.</b> (a) Full spectrum Promptable Training. Based on the meta-architecture of promptable segmentation, channel-adaptive embedding layer is developed to process any-channel input, which relies on a learnable weight dictionary and generates the embedding layer dynam- ically according to the input wavelengths. With the constructed Hyper-Seg dataset, HyperFree is trained with randomly selected channels from full spectrum and point prompts in each iteration. (b) Prompt-mask-feature Interactive Inferring. Keep the trained HyperFree frozen, different PMF interaction workflows are designed to complete the downstream tasks in promptable or zero-shot manner, where we use feature distance to measure the semantic consistency. An interaction instantiation for hyperspectral classification task is given above as an example.
-				</p>
+				</p> -->
 	        </div>
 			<!--/five -->
 	    </div>
 	</section>
 	
-	<section id="experiment">
+	<section id="main">
 	    <div class="container">
-	        <div class="experiment-header">
-	            <h2 class="display-4 mb-3"><b>Promptable manner of HyperFree</b></h2>
-	            <p class="experiment-text" style="text-align: justify;">
-					HyperFree can complete multi-class classification, one-class classification and target detection in promptable manner.
-				</p>
-				<table><tr>
-				<td><img class="img1" src=img/free.png border=0></td>
-				<td><img class="img1" src=img/not-free.png border=0></td>
-				</tr></table>
-<!-- 				<div class="div1">
-				    <img src="img/free.png" alt="">
+            <div class="row">
+				<div class="col-md-6 col-sm-12  align-self-center">
+					<div class="text-left">
+						<h2 class="display-4 mb-3">Promptable manner of HyperFree</h2>
+						<p class="main-text">HyperFree can complete multi-class classification, one-class classification and target detection in promptable manner.</p>
+<!-- 					   <a href="http://localhost:1235/" class="cta" target="_blank">Try our model <i class="fa fa-arrow-circle-o-right"
+								aria-hidden="true"></i></a> -->
+					</div>
 				</div>
-				<div class="div2">
-				    <img src="img/not-free.png" alt="">
-				</div> -->
-				<p class="experiment-text" style="text-align: justify;">
-					<b>Fig. 3.</b> In tuning-free manner (left), HyperFree (1 prompt) can achieve comparable results with specialized models (5 shots) on 5 tasks and 11 datasets. In tuning manner (right), HyperFree can achieve overall better results with specialized models on 8 tasks and 16 datasets.
-				</p>
-				<div>
-				    <img class="img2" src="img/result.png" alt="">
+				<div class="col-md-6 col-sm-12 order-first order-lg-last">
+					<img src="img/zero_shot.png" alt="">
 				</div>
-				<p class="experiment-text" >
-					<b>Fig. 4.</b> Exemplified comparison results for five tuning-free tasks.
-				</p>
-	        </div>
+            </div>
 			<!--/five -->
 	    </div>
 	</section>
 	<section id="main">
 	    <div class="container">
-	        <div class="main-header">
-	            <h2 class="display-4 mb-3"><b>Zero-shot manner of HyperFree</b></h2>
-	            <p class="main-text" style="text-align: justify;">HyperFree can complete anomaly detection and change detection in promptable manner.
-				</p>
-				<div>
-				    <img class="img2" src="img/zero_shot.png" alt="">
+            <div class="row">
+				<div class="col-md-6 col-sm-12">
+					<img src="img/zero_shot.png" alt="">
 				</div>
-				<p class="main-text" >
-					<b>Fig. 1.</b> Comparison of existing RSFMs with the proposed HyperFree model.
-				</p>
-	        </div>
+				<div class="col-md-6 col-sm-12  align-self-center">
+					<div class="text-right">
+						<h2 class="display-4 mb-3">Zero-shot manner of HyperFree</h2>
+						<p class="main-text">HyperFree can complete anomaly detection and change detection in promptable manner.</p>
+<!-- 					   <a href="http://localhost:1235/" class="cta" target="_blank">Try our model <i class="fa fa-arrow-circle-o-right"
+								aria-hidden="true"></i></a> -->
+					</div>
+				</div>
+            </div>
 			<!--/five -->
 	    </div>
 	</section>
@@ -181,27 +171,36 @@
 				<td><img class="img1" src=img/free.png border=0></td>
 				<td><img class="img1" src=img/not-free.png border=0></td>
 				</tr></table>
-				<p class="main-text" >
+<!-- 				<p class="main-text" >
 					<b>Fig. 1.</b> In tuning-free manner (left), HyperFree (1 prompt) can achieve comparable results with specialized models (5 shots) on 5 tasks and 11 datasets. In tuning manner (right), HyperFree can achieve overall better results with specialized models on 8 tasks and 16 datasets.
-				</p>
+				</p> -->
 	        </div>
 			<!--/five -->
 	    </div>
 	</section>
 	<section id="main">
 	    <div class="container">
-	        <div class="main-header">
+			<div class="row">
+				<div class="col-md-6 col-sm-12  align-self-center">
+					<div class="text-left">
+						<h2 class="display-4 mb-3">HyperSeg Data Engine</h2>
+						<p class="main-text">Hyper-Seg is built to generate segmented masks automatically for large-scale promptable training. We finally obtained 41900 high-resolution image pairs with size of 512×512×224.</p>
+<!-- 					   <a href="http://localhost:1235/" class="cta" target="_blank">Try our model <i class="fa fa-arrow-circle-o-right"
+								aria-hidden="true"></i></a> -->
+					</div>
+				</div>
+				<div class="col-md-6 col-sm-12 order-first order-lg-last">
+					<img src="img/data_engine.png" alt="">
+				</div>
+			</div>
+<!-- 	        <div class="main-header">
 	            <h2 class="display-4 mb-3"><b>HyperSeg Data Engine</b></h2>
 	            <p class="main-text" style="text-align: justify;">Hyper-Seg is built to generate segmented masks automatically for large-scale promptable training. We finally obtained 41900 high-resolution image pairs with size of 512×512×224.
-				</p>
-				<table><tr>
-				<td><img class="img1" src=img/data_engine.png border=0></td>
-				<td><img class="img1" src=img/data_engine_table.png border=0></td>
-				</tr></table>
-				<p class="main-text" >
-					<b>Fig. 1.</b> Comparison of existing RSFMs with the proposed HyperFree model.
-				</p>
-	        </div>
+				</p> -->
+			<table><tr>
+			<td><img class="img1" src=img/data_engine_table.png border=0></td>
+			</tr></table>
+<!-- 	        </div> -->
 			<!--/five -->
 	    </div>
 	</section>
