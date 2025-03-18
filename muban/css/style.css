@@ -37,6 +37,9 @@ button:active {
     border: none;
 }
 
+/* .whole{
+	 display: flex;
+} */
 /*--------------------------------------------------------------
 * Global media query declarative
 ----------------------------------------------------------------*/
@@ -72,6 +75,7 @@ body {
     display: flex;
     align-items: center;
     color: whitesmoke;
+/* 	margin-bottom: 2rem; */
 }
 
 .wrap {
@@ -105,7 +109,7 @@ body {
     left: 0;
     width: 100%;
     height: auto;
-    overflow: hidden;
+   overflow: hidden;
 /* 	padding-bottom: 100%; */
 }
 
@@ -122,8 +126,8 @@ body {
     /* height: 100%; */
     top: 0;
     left: 0;
-/*    background: rgba(33, 47, 60, 0.6); */
-	background: rgba(60, 3, 11, 0.6);
+    background: rgba(33, 47, 60, 0.6);
+/* 	background: rgba(60, 3, 11, 0.6); */
     position: absolute;
 	padding-bottom : 58%;
 	/* overflow: hidden; */
@@ -231,10 +235,16 @@ nav {
 /*-- main section */
 
 #main {
-    padding-top: 7rem;
+    padding-top: 5rem;
     padding-bottom: 1rem;
 	background: rgb(255, 255, 255);
+/* 	background: rgb(255, 0, 0); */
 }
+
+/* .container {
+    margin-top: 7rem;
+    margin-bottom: 1rem;
+} */
 
 .main-header {
     text-align: center;
